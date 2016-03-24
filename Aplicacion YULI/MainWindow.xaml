@@ -13,6 +13,6 @@
         <Button x:Name="Inventario" Content="INVENTARIO" HorizontalAlignment="Right" Margin="0,0,334.271,454.37" Width="191.775" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" Click="Inventario_Click" Height="49.481" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment"/>
         <Button x:Name="Ventas" Content="VENTAS" Height="49" Margin="846,542,882,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE"/>
         <Button x:Name="Compras" Content="COMPRAS" Height="50" Margin="0,0,86.444,88.5" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" HorizontalAlignment="Right" Width="192"/>
-
+        <TextBlock Foreground="Yellow" FontSize="150" TextAlignment="Center" Text="Hola Mundo" Margin="-10,224,10,656"></TextBlock>
     </Grid>
 </Window>
