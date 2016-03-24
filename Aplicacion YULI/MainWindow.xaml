@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid Width="1920" Height="1080" Background="Black" Margin="8,0,-16,-31" VerticalAlignment="Bottom">
-        <Button x:Name="Inventario" Content="INVENTARIO" HorizontalAlignment="Right" Height="49.481" Margin="0,389.371,1358.271,0" VerticalAlignment="Top" Width="191.775" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" Click="Inventario_Click"/>
+        <Button x:Name="Inventario" Content="INVENTARIO" HorizontalAlignment="Right" Height="49.481" Margin="0,0,1328.66,449.815" VerticalAlignment="Bottom" Width="191.775" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" Click="Inventario_Click"/>
         <Button x:Name="Ventas" Content="VENTAS" Height="49.481" Margin="885.954,389.371,842.271,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE"/>
         <Button x:Name="Compras" Content="COMPRAS" Height="49.481" Margin="0,389.371,334.271,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" HorizontalAlignment="Right" Width="191.775"/>
 
