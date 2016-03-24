@@ -1,0 +1,29 @@
+﻿<Window x:Class="Aplicacion_YULI.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplicacion_YULI"
+        mc:Ignorable="d"
+        Title="Window2" Height="1078" Width="1920" Background="Black">
+    <Grid Width="1920" Height="1080">
+        <Rectangle x:Name="Fondo_Usuario" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="694.5,504.5,0,516.5" Width="225"/>
+        <Ellipse x:Name="Fondo_Boton_Usuario" Fill="#FF4D6089" HorizontalAlignment="Right" Height="117.333" Margin="0,0,36.282,51.333" VerticalAlignment="Bottom" Width="117.333"/>
+
+        <TextBlock x:Name="Usuario" HorizontalAlignment="Left" Margin="694.5,515,0,528" TextWrapping="Wrap" Width="218.794" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" TextAlignment="Center"><Run Text="USUARIO"/><Run Text=":"/></TextBlock>
+        <TextBox x:Name="ContenedorUsuario" Margin="918.294,504.5,592.206,516" TextWrapping="Wrap" FontSize="32"/>
+        <Rectangle x:Name="Fondo_Cotrasena" Fill="#FF4D6089" HorizontalAlignment="Left" Height="59" Margin="694.5,0,0,397.5" VerticalAlignment="Bottom" Width="225"/>
+        <PasswordBox x:Name="ContenedorContrasena" Height="59" Margin="918.294,0,592.206,397.5" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="Contraseña" HorizontalAlignment="Left" Margin="694.5,0,0,412.5" TextWrapping="Wrap" Width="225" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" Height="33.5" VerticalAlignment="Bottom" TextAlignment="Center" Text="CONTRASEÑA:"/>
+        <TextBlock x:Name="Versión" HorizontalAlignment="Left" Height="32" Margin="38,0,0,58" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="Versión 1.0.0"/><Run Text=" "/></TextBlock>
+        <TextBlock x:Name="Comodin_Studios_texto" Height="24" Margin="722.127,0,607.206,66" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="C"/><Run Text="omodin "/><Run Text="S"/><Run Text="tudios todos los derechos son reservados®"/></TextBlock>
+        <Image x:Name="Logo_Comodin" Height="416.521" Margin="802.294,60.479,701.412,0" VerticalAlignment="Top" Source="logo comodin.png"/>
+        <Button x:Name="Registrar_Usuario" Content="" HorizontalAlignment="Right" Height="93.999" Margin="0,0,34.751,63.667" VerticalAlignment="Bottom" Width="116.196" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="nuevo usuario icono.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button" Content="INICIAR" HorizontalAlignment="Right" Height="48.503" Margin="0,0,592.206,300.497" VerticalAlignment="Bottom" Width="160.294" Background="#FF4D6089" FontSize="29.333" FontFamily="Consolas" FontWeight="Bold" Foreground="White"/>
+
+    </Grid>
+</Window>
