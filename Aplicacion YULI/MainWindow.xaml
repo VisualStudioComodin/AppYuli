@@ -12,7 +12,7 @@
     <Grid Width="1920" Height="1080" Background="Black" Margin="8,0,-16,-31" VerticalAlignment="Bottom">
         <Button x:Name="Inventario" Content="INVENTARIO" HorizontalAlignment="Right" Margin="0,0,334.271,454.37" Width="191.775" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" Click="Inventario_Click" Height="49.481" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment"/>
         <Button x:Name="Ventas" Content="VENTAS" Height="49" Margin="10,60,1718,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE"/>
-        <Button x:Name="Compras" Content="COMPRAS" Height="49.481" Margin="0,389.371,334.271,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" HorizontalAlignment="Right" Width="191.775"/>
+        <Button x:Name="Compras" Content="COMPRAS" Height="50" Margin="0,60,50,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" HorizontalAlignment="Right" Width="192"/>
 
     </Grid>
 </Window>
