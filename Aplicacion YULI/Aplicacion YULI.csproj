@@ -85,6 +85,9 @@
     <Compile Include="Inventario.xaml.cs">
       <DependentUpon>Inventario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu Principal.xaml.cs">
+      <DependentUpon>Menu Principal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla Inicio.xaml.cs">
       <DependentUpon>Pantalla Inicio.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Inventario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu Principal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +184,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Check Bien copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono Almacen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Design\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ajustes Boton Final.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
