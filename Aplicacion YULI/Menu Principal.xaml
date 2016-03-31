@@ -8,7 +8,7 @@
         Title="Menu_Principal" WindowStartupLocation="Manual" Background="Black" Width="1920" Height="1080">
     <Grid Margin="0,0,2,0" Width="1920" Height="1080">
         <Rectangle x:Name="contenedor_botones" Fill="#FF1F1F1F" Margin="201,170.928,238,201" Stroke="White" RadiusX="50" RadiusY="50" StrokeThickness="8"/>
-        <Button x:Name="boton_intentario" Content="INVENTARIO" HorizontalAlignment="Left" Margin="268,433.635,0,0" Width="254" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="registrarBoton_Click" Height="53.365" VerticalAlignment="Top">
+        <Button x:Name="boton_intentario" Content="INVENTARIO" HorizontalAlignment="Left" Margin="268,433.635,0,0" Width="254" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Height="53.365" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -18,7 +18,7 @@
         </Button>
         <Image x:Name="image" HorizontalAlignment="Left" Height="239" Margin="280,197.5,0,0" VerticalAlignment="Top" Width="239" Source="Icono Almacen.png"/>
         <TextBlock x:Name="textBlock" Height="272.572" Margin="879.859,152.928,845.359,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFFF7070" FontSize="280" FontWeight="Bold" FontFamily="Consolas" Text="C"/>
-        <Button x:Name="boton_compras" Content="COMPRAS" Margin="838,433.635,828,0" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="registrarBoton_Click" Height="53.365" VerticalAlignment="Top">
+        <Button x:Name="boton_compras" Content="COMPRAS" Margin="838,433.635,828,0" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Height="53.365" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -27,7 +27,7 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="textBlock_Copy" Height="272.572" Margin="0,152.928,325.359,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF90EE5A" FontSize="280" FontWeight="Bold" FontFamily="Consolas" Text="V" HorizontalAlignment="Right" Width="194.782"/>
-        <Button x:Name="boton_ventas" Content="VENTAS" Margin="0,433.635,313.359,0" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="registrarBoton_Click" HorizontalAlignment="Right" Width="254" Height="53.365" VerticalAlignment="Top">
+        <Button x:Name="boton_ventas" Content="VENTAS" Margin="0,433.635,313.359,0" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" HorizontalAlignment="Right" Width="254" Height="53.365" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -35,7 +35,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="boton_general" Content="GENERAL" Height="53.365" Margin="838,0,828,247" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="registrarBoton_Click">
+        <Button x:Name="boton_general" Content="GENERAL" Height="53.365" Margin="838,0,828,247" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -47,7 +47,7 @@
         <Rectangle Fill="#FFB8C2DA" Height="73" Margin="-126,24,-106,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="3"/>
         <TextBlock x:Name="Bienvenida_Usuario" Height="65" Margin="0,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="BIENVENIDO:  MOJON" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="39,0,0,25" Width="139" Source="Ajustes Boton Final.png" Height="139" VerticalAlignment="Bottom"/>
-        <Button x:Name="boton_realizar_venta" Content="REALIZAR VENTA" Height="89.365" Margin="0,0,58,52" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="registrarBoton_Click" HorizontalAlignment="Right" Width="340">
+        <Button x:Name="boton_realizar_venta" Content="REALIZAR VENTA" Height="89.365" Margin="0,0,58,52" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="boton_realizar_venta_Click" HorizontalAlignment="Right" Width="340">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>

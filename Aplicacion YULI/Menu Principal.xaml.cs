@@ -23,5 +23,10 @@ namespace Aplicacion_YULI
         {
             InitializeComponent();
         }
+
+        private void boton_realizar_venta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
