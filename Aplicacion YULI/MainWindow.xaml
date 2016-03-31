@@ -8,7 +8,7 @@
         ResizeMode="CanResize"
         Loaded="window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="1080" Width="1920" SizeChanged="Window_SizeChanged">
     <Grid Width="1920" Height="1080" Background="Black" Margin="8,0,-16,-31" VerticalAlignment="Bottom">
         <Canvas x:Name="ERROR" Margin="415.478,278.615,257.272,217.764" d:IsHidden="True">
             <Rectangle Fill="#FF1F1F1F" Stroke="#FFE27575" StrokeThickness="9" RadiusX="50" RadiusY="50" Height="583.621" Width="1247.25"/>
