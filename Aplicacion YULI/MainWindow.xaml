@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:Aplicacion_YULI"
         SizeToContent="WidthAndHeight"
         ResizeMode="CanResize"
-        Loaded="window_Loaded"
+        Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="1080" Width="1920" SizeChanged="Window_SizeChanged">
     <Grid Width="1920" Height="1080" Background="Black" Margin="8,0,-16,-31" VerticalAlignment="Bottom">
         <Button x:Name="Inventario" Content="INVENTARIO" HorizontalAlignment="Right" Margin="0,0,331.993,488.519" Width="191.775" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE" Click="Inventario_Click" Height="49.481" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment"/>
         <Button x:Name="Ventas" Content="VENTAS" Height="49" Margin="846,542,882,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="#FF858AE6" Background="#FFDEDEDE"/>

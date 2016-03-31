@@ -6,20 +6,20 @@
         xmlns:local="clr-namespace:Aplicacion_YULI"
         xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="Aplicacion_YULI.Registro_Usuario"
         mc:Ignorable="d"
-        Title="Registro_Usuario" Height="1080" Width="1920" Background="Black">
+        Title="Registro_Usuario" Height="1080" Width="1920" Background="Black" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded_1" SizeToContent="WidthAndHeight">
     <Grid Width="1920" Height="1080">
         <Ellipse x:Name="Fondo_Boton_Atras" Fill="#FF4D6089" HorizontalAlignment="Left" Height="83" Margin="82.834,0,0,78.999" VerticalAlignment="Bottom" Width="83"/>
         <Rectangle Fill="#9B3D424D" Height="91" VerticalAlignment="Top" Margin="0,0,-13.5,0"/>
         <ed:BlockArrow x:Name="Boton_Atras" Fill="White" HorizontalAlignment="Left" Height="45.632" Margin="96.433,0,0,98.467" Orientation="Left" VerticalAlignment="Bottom" Width="51.716"/>
         <Rectangle x:Name="Fondo_Nombre" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="80.5,216,0,0" Width="165.845" Height="43.857" VerticalAlignment="Top"/>
         <TextBlock x:Name="Nombre" HorizontalAlignment="Left" Margin="80.5,222.237,0,0" TextWrapping="Wrap" Width="161.271" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top"><Run Text="NOMBRE"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="ContenedorNombre" Margin="245.456,216,0,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Left" Height="43.857" VerticalAlignment="Top" Width="638.234"/>
+        <TextBox x:Name="txtNombre" Margin="245.456,216,0,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Left" Height="43.857" VerticalAlignment="Top" Width="638.234"/>
         <Rectangle x:Name="Fondo_Apellido" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="80.5,312,0,0" Width="165.845" Height="43.857" VerticalAlignment="Top"/>
         <TextBlock x:Name="Apellido" HorizontalAlignment="Left" Margin="80.5,318.237,0,0" TextWrapping="Wrap" Width="161.271" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top"><Run Text="APELLIDO"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="ContenedorApellido" Margin="245.456,312,0,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Left" Height="43.857" VerticalAlignment="Top" Width="638.234"/>
+        <TextBox x:Name="txtApellido" Margin="245.456,312,0,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Left" Height="43.857" VerticalAlignment="Top" Width="638.234"/>
         <Rectangle x:Name="Fondo_Fecha_Nacimiento" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="77,413,0,0" Width="358.345" Height="43.857" VerticalAlignment="Top"/>
         <TextBlock x:Name="Fecha_Nacimiento" HorizontalAlignment="Left" Margin="77,419.237,0,0" TextWrapping="Wrap" Width="358.345" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top"><Run Text="FECHA DE "/><Run Text="N"/><Run Text="A"/><Run Text="CIEMIENTO"/></TextBlock>
-        <Calendar Margin="167,534.857,0,377.176" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderThickness="1" d:LayoutOverrides="Height">
+        <Calendar x:Name="calendario" Margin="167,534.857,0,377.176" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" BorderThickness="1" d:LayoutOverrides="Height">
             <Calendar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="2" ScaleY="2"/>
@@ -31,25 +31,22 @@
         </Calendar>
         <Rectangle x:Name="Fondo_Cedula" Fill="#FF4D6089" Margin="0,216,569.47,0" Height="43.857" VerticalAlignment="Top" HorizontalAlignment="Right" Width="207.53"/>
         <TextBlock x:Name="Cedula" Margin="0,222.237,575.194,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" HorizontalAlignment="Right" Width="201.806"><Run Text="CI"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="ContenedorCedula" Margin="0,216,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Height="43.857" VerticalAlignment="Top" Width="439.838"/>
+        <TextBox x:Name="txtCedula" Margin="0,216,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Height="43.857" VerticalAlignment="Top" Width="439.838"/>
         <Rectangle x:Name="Fondo_Usuario" Fill="#FF4D6089" Margin="0,414.5,568.866,0" HorizontalAlignment="Right" Width="208.634" Height="43.857" VerticalAlignment="Top"/>
         <TextBlock x:Name="Usuario" Margin="0,420.737,574.62,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="202.88" Height="28.606" VerticalAlignment="Top"><Run Text="USUARIO"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="ContenedorUsuario" Margin="0,414.5,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Width="439.838" Height="43.857" VerticalAlignment="Top"/>
-        <Rectangle x:Name="Fondo_Contrasena" Fill="#FF4D6089" Margin="0,518.5,568.82,517.643" HorizontalAlignment="Right" Width="208.68"/>
-        <TextBlock x:Name="Contrasena" Margin="0,524.737,574.576,526.657" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="202.924"><Run Text="CONTRASEÑA"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="ContenedorContrasena" Margin="0,518.5,129.706,517.643" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Width="439.838"/>
+        <TextBox x:Name="txtUsuario" Margin="0,414.5,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Width="439.838" Height="43.857" VerticalAlignment="Top"/>
+        <Rectangle x:Name="Fondo_Contrasena" Fill="#FF4D6089" Margin="0,615,570,422" HorizontalAlignment="Right" Width="209"/>
+        <TextBlock x:Name="ContrasenaRepetida" Margin="0,621,576,431" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="203"><Run Language="es-bo" Text="REPETIR"/><Run Text=":"/></TextBlock>
         <Rectangle x:Name="Fondo_Profesion" Fill="#FF4D6089" Margin="0,314,569.47,0" Height="43.857" VerticalAlignment="Top" HorizontalAlignment="Right" Width="207.53"/>
         <TextBlock x:Name="Profesion" Margin="0,320.237,575.194,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" HorizontalAlignment="Right" Width="201.806"><Run Text="PROFE"/><Run Text="SIÓ"/><Run Text="N"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="Contenedor_Profesion" Margin="0,314,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Height="43.857" VerticalAlignment="Top" Width="439.838"/>
+        <TextBox x:Name="txtProfesion" Margin="0,314,129.706,0" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Right" Height="43.857" VerticalAlignment="Top" Width="439.838"/>
         <Rectangle x:Name="Fondo_Fecha_Nacimiento_Copy" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="525.345,413,0,0" Width="358.345" Height="43.857" VerticalAlignment="Top"/>
         <TextBlock x:Name="Fecha_Nacimiento_Copy" HorizontalAlignment="Left" Margin="525.345,419.237,0,0" TextWrapping="Wrap" Width="358.345" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" Text="FOTOGRAFÍA USUARIO"/>
-        <Rectangle x:Name="Contenedor_Fotografia" HorizontalAlignment="Left" Margin="525.345,456.857,0,298" Width="358.345" Stroke="#FFFFFDFD" StrokeThickness="5" Fill="#FF26243E"/>
-        <Image x:Name="fotografia_icono" HorizontalAlignment="Left" Height="76.667" Margin="663.334,0,0,414" VerticalAlignment="Bottom" Width="76.667" Source="imagen jpg icono.png"/>
-        <Rectangle x:Name="Fondo_Permisos" Fill="#FF4D6089" Margin="0,0,568.82,418" HorizontalAlignment="Right" Width="208.68" Height="43.857" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="Permisos" Margin="0,0,574.576,427.014" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="202.924" Height="28.606" VerticalAlignment="Bottom" Text="PERMISOS"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Right" Margin="0,0,129.706,418" VerticalAlignment="Bottom" Width="439.838" Height="43.857"/>
+        <Rectangle x:Name="Fondo_Permisos" Fill="#FF4D6089" Margin="0,0,570,322" HorizontalAlignment="Right" Width="209" Height="44" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="Permisos" Margin="0,0,576,331" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="203" Height="29" VerticalAlignment="Bottom" Text="PERMISOS"/>
+        <ComboBox x:Name="comboBoxPermisos" HorizontalAlignment="Right" Margin="0,0,131,322" VerticalAlignment="Bottom" Width="440" Height="44" FontSize="32"/>
         <TextBlock x:Name="Ventana_Nombre" Height="113" Margin="695.626,0,575.194,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="REGISTRAR USUARIO" FontSize="64" FontWeight="Bold"/>
-        <Button x:Name="button" Content="REGISTRAR" HorizontalAlignment="Right" Height="78.5" Margin="0,0,129.706,273.655" VerticalAlignment="Bottom" Width="315.892" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="36" Foreground="White">
+        <Button x:Name="registrarBoton" Content="REGISTRAR" HorizontalAlignment="Right" Height="79" Margin="0,0,130,98" VerticalAlignment="Bottom" Width="316" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="36" Foreground="White" Click="registrarBoton_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -57,5 +54,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <PasswordBox x:Name="txtClave" HorizontalAlignment="Left" Margin="1350,614,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
+        <Button x:Name="fotoBoton" Padding="115" Height="325" Width="359" Background="#FF26243E" BorderBrush="White" Margin="525,457,1036,298" Click="fotoBoton_Click">
+            <DockPanel>
+                <Image x:Name="fotoUsuario" Source="imagen jpg icono.png"/>
+            </DockPanel>
+        </Button>
+        <Rectangle x:Name="Fondo_Contrasena_Copy" Fill="#FF4D6089" Margin="0,513,570,524" HorizontalAlignment="Right" Width="209"/>
+        <TextBlock x:Name="Contrasena_Copy" Margin="0,519,576,533" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="203"><Run Text="CONTRASEÑA"/><Run Text=":"/></TextBlock>
+        <PasswordBox x:Name="txtClave_Copy" HorizontalAlignment="Left" Margin="1350,512,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
     </Grid>
 </Window>
