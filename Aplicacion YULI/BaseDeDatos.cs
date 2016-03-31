@@ -9,6 +9,7 @@ namespace Aplicacion_YULI
 {
     class BaseDeDatos
     {
+
         private MySqlConnection conexion;
         private string conector;
         public static BaseDeDatos bd = new BaseDeDatos();
