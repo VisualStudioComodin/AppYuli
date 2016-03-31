@@ -25,7 +25,7 @@ namespace Aplicacion_YULI
             InitializeComponent();
             Registro_Usuario u = new Registro_Usuario();
             u.Show();
-
+            
         }
 
         private void Inventario_Click(object sender, RoutedEventArgs e)

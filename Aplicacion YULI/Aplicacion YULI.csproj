@@ -91,6 +91,11 @@
     <Compile Include="Registro Usuario.xaml.cs">
       <DependentUpon>Registro Usuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="sistema_yuliDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistema_yuliDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +147,17 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="sistema_yuliDataSet2.xsc">
+      <DependentUpon>sistema_yuliDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sistema_yuliDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistema_yuliDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistema_yuliDataSet2.xss">
+      <DependentUpon>sistema_yuliDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

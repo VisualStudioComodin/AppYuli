@@ -26,32 +26,11 @@ namespace Aplicacion_YULI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=sistema_yuli;port=3306;password=root;persi" +
-            "stsecurityinfo=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=sistema_yuli;port=3306;allowuservariables=" +
+            "True;password=root;persistsecurityinfo=True")]
         public string sistema_yuliConnectionString {
             get {
                 return ((string)(this["sistema_yuliConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=root;database=sistema_yuli;port=3306")]
-        public string sistemaYuliUsuarios {
-            get {
-                return ((string)(this["sistemaYuliUsuarios"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=sistema_yuli;port=3306;allowuservariables=" +
-            "True;password=root")]
-        public string sistemaYuliUsuario {
-            get {
-                return ((string)(this["sistemaYuliUsuario"]));
             }
         }
     }
