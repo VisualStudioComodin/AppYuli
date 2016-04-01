@@ -97,10 +97,11 @@ namespace Aplicacion_YULI
         private void fotoBoton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Select a picture";
-            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+            op.Title = "Seleccione una fotografía";
+            op.Filter = "Todas las imágenes soportadas|*.jpg;*.jpeg;*.png;*.gif|" +
               "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
-              "Portable Network Graphic (*.png)|*.png";
+              "PNG (*.png)|*.png|" +
+              "GIF (*.gif)|*.gif";
             if (op.ShowDialog() == true)
             {
                 fotoUsuario.Source = new BitmapImage(new Uri(op.FileName));
