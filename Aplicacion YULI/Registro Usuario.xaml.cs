@@ -38,14 +38,14 @@ namespace Aplicacion_YULI
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (e.HeightChanged)
-            {
-                this.Width = e.NewSize.Height * aspectRatio;
-            }
-            else if (e.WidthChanged)
-            {
-                this.Height = e.NewSize.Width * (1 / aspectRatio);
-            }
+            //if (e.HeightChanged)
+            //{
+            //    this.Width = e.NewSize.Height * aspectRatio;
+            //}
+            //else if (e.WidthChanged)
+            //{
+            //    this.Height = e.NewSize.Width * (1 / aspectRatio);
+            //}
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
