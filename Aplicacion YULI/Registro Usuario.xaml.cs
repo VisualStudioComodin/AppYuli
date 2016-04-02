@@ -38,14 +38,14 @@ namespace Aplicacion_YULI
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (e.HeightChanged)
-            {
-                this.Width = e.NewSize.Height * aspectRatio;
-            }
-            else if (e.WidthChanged)
-            {
-                this.Height = e.NewSize.Width * (1 / aspectRatio);
-            }
+            //if (e.HeightChanged)
+            //{
+            //    this.Width = e.NewSize.Height * aspectRatio;
+            //}
+            //else if (e.WidthChanged)
+            //{
+            //    this.Height = e.NewSize.Width * (1 / aspectRatio);
+            //}
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
@@ -97,10 +97,11 @@ namespace Aplicacion_YULI
         private void fotoBoton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Select a picture";
-            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+            op.Title = "Seleccione una fotografía";
+            op.Filter = "Todas las imágenes soportadas|*.jpg;*.jpeg;*.png;*.gif|" +
               "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
-              "Portable Network Graphic (*.png)|*.png";
+              "PNG (*.png)|*.png|" +
+              "GIF (*.gif)|*.gif";
             if (op.ShowDialog() == true)
             {
                 fotoUsuario.Source = new BitmapImage(new Uri(op.FileName));
