@@ -23,34 +23,31 @@ namespace Aplicacion_YULI
     /// </summary>
     public partial class Registro_Usuario : Window
     {
-        private double aspectRatio = 0.0;
         private Byte[] fotoBytes;
         private ImageSource imagenPorDefecto;
+        private Window owner;
+        private Usuario usuario;
 
-        public Registro_Usuario()
+        public Registro_Usuario(Window owner, Usuario usuario)
         {
             InitializeComponent();
+            this.owner = owner;
             imagenPorDefecto = fotoUsuario.Source;
             comboBoxPermisos.Items.Add("Limitados");
             comboBoxPermisos.Items.Add("Especiales");
             comboBoxPermisos.Items.Add("Totales");
+            this.usuario = usuario;
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            //if (e.HeightChanged)
-            //{
-            //    this.Width = e.NewSize.Height * aspectRatio;
-            //}
-            //else if (e.WidthChanged)
-            //{
-            //    this.Height = e.NewSize.Width * (1 / aspectRatio);
-            //}
+            this.responsive.Height = this.Height;
+            this.responsive.Width = this.Width;
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            aspectRatio = this.ActualWidth / this.ActualHeight;
+
         }
 
         private void registrarBoton_Click(object sender, RoutedEventArgs e)
@@ -65,31 +62,49 @@ namespace Aplicacion_YULI
             valores[6] = calendario.SelectedDate;
             valores[7] = ((comboBoxPermisos.SelectedIndex == -1) ? null : (object)comboBoxPermisos.SelectedIndex);
             valores[8] = fotoBytes;
+            CuadroMensaje mensaje;
             try
             {
-                new Usuario(valores);
-                MessageBox.Show("Usuario registrado");
-                txtUsuario.Text = null;
-                txtClave.Password = null;
-                txtNombre.Text = null;
-                txtApellido.Text = null;
-                txtCedula.Text = null;
-                txtProfesion.Text = null;
-                calendario.DisplayDate = DateTime.Today;
-                calendario.SelectedDate = null;
-                comboBoxPermisos.SelectedIndex = -1;
-                fotoBytes = null;
-                fotoBoton.Padding = new Thickness(115);
-                fotoUsuario.Source = imagenPorDefecto;
+                bool res = true;
+                if (fotoBytes == null)
+                {
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "¿Registrar sin fotografía?", 2, "");
+                    mensaje.Owner = owner;
+                    mensaje.ShowDialog();
+                    res = mensaje.DarRespuesta();
+                }
+                if (res)
+                {
+                    usuario.CrearNuevoUsuario(valores);
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Usuario registrado", 3, "");
+                    mensaje.Owner = owner;
+                    mensaje.ShowDialog();
+                    txtUsuario.Text = null;
+                    txtClave.Password = null;
+                    txtNombre.Text = null;
+                    txtApellido.Text = null;
+                    txtCedula.Text = null;
+                    txtProfesion.Text = null;
+                    calendario.DisplayDate = DateTime.Today;
+                    calendario.SelectedDate = null;
+                    comboBoxPermisos.SelectedIndex = -1;
+                    fotoBytes = null;
+                    fotoBoton.Padding = new Thickness(115);
+                    fotoUsuario.Source = imagenPorDefecto;
+                }
             }
             catch (MySqlException ex)
             {
-                switch (ex.Number)
-                {
-                    case 1048: MessageBox.Show("Debe llenar todos los campos");
-                        break;
-                    case 1062: MessageBox.Show("Ya existe el usuario: " + txtUsuario.Text);
-                        break;
+               
+                if(ex.Number == 1048){
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe llenar todos los campos", 1, "Error 1048");
+                    mensaje.Owner = owner;
+                    mensaje.ShowDialog();
+                }
+                else if(ex.Number == 1062){
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Ya existe el usuario: " + txtUsuario.Text, 1, "Error 1062");
+                    mensaje.Owner = owner;
+                    mensaje.ShowDialog();
                 }
             }
         }
@@ -117,6 +132,15 @@ namespace Aplicacion_YULI
             BinaryReader reader = new BinaryReader(foto);
             arreglo = reader.ReadBytes(Convert.ToInt32(foto.Length));
             return arreglo;
+        }
+
+        private void botonAtras_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 u = new Window2(owner, usuario);
+            owner.Content = ((Viewbox)u.Content);
+            ((Viewbox)owner.Content).Height = owner.Height;
+            ((Viewbox)owner.Content).Width = owner.Width;
+            u.Close();
         }
     }
 }

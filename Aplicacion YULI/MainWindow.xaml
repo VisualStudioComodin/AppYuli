@@ -1,4 +1,4 @@
-﻿<Window x:Class="Aplicacion_YULI.MainWindow"
+﻿<Window x:Name="ventana" x:Class="Aplicacion_YULI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,68 +6,10 @@
         xmlns:local="clr-namespace:Aplicacion_YULI"
         SizeToContent="WidthAndHeight"
         ResizeMode="CanResize"
-        Loaded="window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" SizeChanged="Window_SizeChanged">
-    <Grid Width="1920" Height="1080" Background="Black" Margin="8,0,-16,-31" VerticalAlignment="Bottom">
-        <Canvas x:Name="ERROR" Margin="415.478,278.615,257.272,217.764" d:IsHidden="True">
-            <Rectangle Fill="#FF1F1F1F" Stroke="#FFE27575" StrokeThickness="9" RadiusX="50" RadiusY="50" Height="583.621" Width="1247.25"/>
-            <Button x:Name="button" Content="ACEPTAR" Height="51.289" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Canvas.Left="544.924" Canvas.Top="497.441" Width="206.392">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF4D6089" Offset="0"/>
-                        <GradientStop Color="#FF2B3751" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Rectangle Fill="White" StrokeThickness="9" RadiusX="25" RadiusY="25" Height="318.875" Canvas.Left="313.022" Canvas.Top="140.885" Width="878"/>
-            <Path Data="M92.522,140.385 L359.85534,141.05166 C359.85534,141.05166 509.52254,301.80552 353.02234,459.47788 L92.522003,459.60281 C92.522003,459.60281 72.396954,458.97812 69.021946,436.73907 L69.355284,162.20758 C69.355284,162.20758 71.355276,142.71719 92.522,140.385 z" Fill="#FFE27575" Height="319.76" Canvas.Left="69.022" Stretch="Fill" StrokeThickness="9" Canvas.Top="140" Width="355.372"/>
-            <Image x:Name="image" Width="254" Source="Error.png" Height="254" Canvas.Left="101.522" Canvas.Top="170.385"/>
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" TextAlignment="Center" Height="251" Canvas.Left="460.522" Canvas.Top="172.385" Width="694.5"><Run Text="Aquí viene el texto del error, "/><Run Text="Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error,"/></TextBlock>
-            <Rectangle Fill="#FFE27575" Height="54" StrokeThickness="9" RadiusX="25" RadiusY="25" Canvas.Left="69.022" Canvas.Top="47.885" Width="1122"/>
-            <TextBlock x:Name="textBlock1" Height="63" TextWrapping="Wrap" Text="ERROR 207" FontSize="45.333" FontWeight="Bold" TextAlignment="Center" Canvas.Left="69.022" Canvas.Top="40.885" Width="1122"/>
-        </Canvas>
-        <Canvas x:Name="ADVERTENCIA" Margin="415.478,278.615,257.272,217.764" d:IsHidden="True">
-            <Rectangle Fill="#FF1F1F1F" Stroke="#FF837D41" StrokeThickness="9" RadiusX="50" RadiusY="50" Height="583.621" Width="1247.25"/>
-            <Button x:Name="button1" Content="CANCELAR" Height="51.289" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Canvas.Left="396.522" Canvas.Top="496.941" Width="206.392">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF4D6089" Offset="0"/>
-                        <GradientStop Color="#FF2B3751" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Rectangle Fill="White" StrokeThickness="9" RadiusX="25" RadiusY="25" Height="318.875" Canvas.Left="313.022" Canvas.Top="140.885" Width="878"/>
-            <Path Data="M92.522,140.385 L359.85534,141.05166 C359.85534,141.05166 509.52254,301.80552 353.02234,459.47788 L92.522003,459.60281 C92.522003,459.60281 72.396954,458.97812 69.021946,436.73907 L69.355284,162.20758 C69.355284,162.20758 71.355276,142.71719 92.522,140.385 z" Fill="#FF837D41" Height="319.76" Canvas.Left="69.022" Stretch="Fill" StrokeThickness="9" Canvas.Top="140" Width="355.372"/>
-            <Image x:Name="image1" Width="254" Source="Advertencia.png" Height="254" Canvas.Left="101.522" Canvas.Top="170.385"/>
-            <TextBlock x:Name="textBlock2" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" TextAlignment="Center" Height="251" Canvas.Left="460.522" Canvas.Top="172.385" Width="694.5"><Run Text="Aquí viene el texto del error, "/><Run Text="Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error,"/></TextBlock>
-            <Rectangle Fill="#FF837D41" Height="54" StrokeThickness="9" RadiusX="25" RadiusY="25" Canvas.Left="69.022" Canvas.Top="47.885" Width="1122"/>
-            <TextBlock x:Name="textBlock3" Height="63" TextWrapping="Wrap" Text="ADVERTENCIA" FontSize="45.333" FontWeight="Bold" TextAlignment="Center" Canvas.Left="73.022" Canvas.Top="40.885" Width="1122" Foreground="White"/>
-            <Button x:Name="button1_Copy" Content="CONTINUAR" Height="51.289" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Canvas.Left="690.63" Canvas.Top="496.941" Width="206.392">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF4D6089" Offset="0"/>
-                        <GradientStop Color="#FF2B3751" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-        </Canvas>
-        <Canvas x:Name="ACEPTAR" Margin="415.478,278.615,257.272,217.764">
-            <Rectangle Fill="#FF1F1F1F" Stroke="#FF4D7840" StrokeThickness="9" RadiusX="50" RadiusY="50" Height="583.621" Width="1247.25"/>
-            <Button x:Name="button2" Content="ACEPTAR" Height="51.289" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Canvas.Left="540.424" Canvas.Top="497.441" Width="206.392">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF52894D" Offset="0"/>
-                        <GradientStop Color="#FF30512B" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Rectangle Fill="White" StrokeThickness="9" RadiusX="25" RadiusY="25" Height="318.875" Canvas.Left="313.022" Canvas.Top="140.885" Width="878"/>
-            <Path Data="M92.522,140.385 L359.85534,141.05166 C359.85534,141.05166 509.52254,301.80552 353.02234,459.47788 L92.522003,459.60281 C92.522003,459.60281 72.396954,458.97812 69.021946,436.73907 L69.355284,162.20758 C69.355284,162.20758 71.355276,142.71719 92.522,140.385 z" Fill="#FF4D7840" Height="319.76" Canvas.Left="69.022" Stretch="Fill" StrokeThickness="9" Canvas.Top="140" Width="355.372"/>
-            <Image x:Name="image2" Width="254" Source="Check Bien copia.png" Height="254" Canvas.Left="101.522" Canvas.Top="170.385"/>
-            <TextBlock x:Name="textBlock4" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" TextAlignment="Center" Height="251" Canvas.Left="460.522" Canvas.Top="172.385" Width="694.5"><Run Text="Aquí viene el texto del error, "/><Run Text="Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error, Aquí viene el texto del error,"/></TextBlock>
-            <Rectangle Fill="#FF4D7840" Height="54" StrokeThickness="9" RadiusX="25" RadiusY="25" Canvas.Left="69.022" Canvas.Top="47.885" Width="1122"/>
-            <TextBlock x:Name="textBlock5" Height="63" TextWrapping="Wrap" Text="CORRECTO" FontSize="45.333" FontWeight="Bold" TextAlignment="Center" Canvas.Left="69.022" Canvas.Top="40.885" Width="1122" Foreground="White"/>
-        </Canvas>
+        Title="Yuli App" Height="1080" Width="1920" Background="Black" SizeChanged="ventana_SizeChanged">    
+    <Viewbox Width="1920" Height="1080">
+    <Grid x:Name="contenedorMain" Width="1920" Height="1080" Background="Black">
     </Grid>
+    </Viewbox>
 </Window>

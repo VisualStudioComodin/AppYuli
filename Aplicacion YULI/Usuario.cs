@@ -13,10 +13,11 @@ using System.Windows.Media;
 
 namespace Aplicacion_YULI
 {
-    class Usuario
+    public class Usuario
     {
         private string[] variables;
         private string tabla;
+        private string id;
 
         public Usuario()
         {
@@ -31,8 +32,27 @@ namespace Aplicacion_YULI
 
         private void Inicializar()
         {
+            this.id = "";
             tabla = "usuarios";
             variables = new string[] { "id", "clave", "nombre", "apellido", "ci", "profesion", "fecha", "permisos", "foto" };
+        }
+
+        public bool IniciarSesion(string id, string clave)
+        {
+            bool res = this.CompararClave(id, clave);
+            if (res)
+                this.id = id;
+            return res;
+        }
+
+        public bool SesionIniciada()
+        {
+            return !this.id.Equals("");
+        }
+
+        public void CerrarSesion()
+        {
+            this.id = "";
         }
 
         public void CrearNuevoUsuario(object[] valores)
@@ -40,42 +60,42 @@ namespace Aplicacion_YULI
             BaseDeDatos.bd.Insertar(tabla, variables, valores);
         }
 
-        public string DarNombre(string id)
+        public string DarNombre()
         {
             return (string)DarValor(id, 2);
         }
 
-        public string DarApellido(string id)
+        public string DarApellido()
         {
             return (string)DarValor(id, 3);
         }
 
-        public string DarCedula(string id)
+        public string DarCedula()
         {
             return (string)DarValor(id, 4);
         }
 
-        public string DarProfesion(string id)
+        public string DarProfesion()
         {
             return (string)DarValor(id, 5);
         }
 
-        public DateTime DarFechaDeNacimiento(string id)
+        public DateTime DarFechaDeNacimiento()
         {
             return new MySqlDateTime((string)DarValor(id, 6)).GetDateTime();
         }
 
-        public int DarTipoDePermiso(string id) 
+        public int DarTipoDePermiso() 
         {
             return int.Parse((string)DarValor(id, 7));
         }
  
-        public bool CompararClave(string id, string clave)
+        private bool CompararClave(string id, string clave)
         {
             return clave.Equals((string)DarValor(id, 1));
         }
 
-        public ImageSource DarFoto(string id)
+        public ImageSource DarFoto()
         {
             Byte[] bytes = DarFotoBytes(id);
             MemoryStream ms = new MemoryStream(bytes);

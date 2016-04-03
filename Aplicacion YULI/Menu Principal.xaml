@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Aplicacion_YULI"
         mc:Ignorable="d"
         Title="Menu_Principal" WindowStartupLocation="Manual" Background="Black" Width="1920" Height="1080">
+    <Viewbox Width="1920" Height="1080">
     <Grid Margin="0,0,2,0" Width="1920" Height="1080">
         <Rectangle x:Name="contenedor_botones" Fill="#FF1F1F1F" Margin="201,170.928,238,201" Stroke="White" RadiusX="50" RadiusY="50" StrokeThickness="8"/>
         <Button x:Name="boton_intentario" Content="INVENTARIO" HorizontalAlignment="Left" Margin="268,433.635,0,0" Width="254" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Height="53.365" VerticalAlignment="Top">
@@ -44,7 +45,7 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="textBlock_Copy1" Margin="879.859,499.5,845.359,307.928" TextWrapping="Wrap" Foreground="#FF5873EE" FontSize="280" FontWeight="Bold" FontFamily="Consolas" Text="G"/>
-        <Rectangle Fill="#FFB8C2DA" Height="73" Margin="-126,24,-106,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="3"/>
+            <Rectangle Fill="#FFB8C2DA" Height="73" Margin="-126,24,-106,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="3"/>
         <TextBlock x:Name="Bienvenida_Usuario" Height="65" Margin="0,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="BIENVENIDO:  MOJON" FontSize="48" TextAlignment="Center" FontWeight="Bold"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="39,0,0,25" Width="139" Source="Ajustes Boton Final.png" Height="139" VerticalAlignment="Bottom"/>
         <Button x:Name="boton_realizar_venta" Content="REALIZAR VENTA" Height="89.365" Margin="0,0,58,52" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="boton_realizar_venta_Click" HorizontalAlignment="Right" Width="340">
@@ -56,4 +57,5 @@
             </Button.Background>
         </Button>
     </Grid>
+    </Viewbox>
 </Window>

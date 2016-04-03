@@ -82,6 +82,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseDeDatos.cs" />
+    <Compile Include="CuadroMensaje.xaml.cs">
+      <DependentUpon>CuadroMensaje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.xaml.cs">
       <DependentUpon>Inventario.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
       <DependentUpon>sistema_yuliDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
+    <Page Include="CuadroMensaje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -18,30 +18,37 @@ namespace Aplicacion_YULI
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+
+        private Viewbox responsive;
+        public Usuario usuarios;
+
         public MainWindow()
         {
             InitializeComponent();
-            Registro_Usuario u = new Registro_Usuario();
-            u.Show();
-            
+            usuarios = new Usuario();
+            Window2 u = new Window2(this.ventana, usuarios);
+            ventana.Content = null;
+            responsive = ((Viewbox)u.Content);
+            responsive.Height = this.Height;
+            responsive.Width = this.Width;
+            ventana.AddChild(responsive);
+            u.Close();
         }
 
-        private void Inventario_Click(object sender, RoutedEventArgs e)
+        private void ventana_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-
-        }
-        private void window_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.MinWidth = this.ActualWidth;
-            this.MinHeight = this.ActualHeight;
-            this.MaxHeight = this.ActualHeight;
-        }
-
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-
+            try
+            {
+                ((Viewbox)ventana.Content).Width = this.Width;
+                ((Viewbox)ventana.Content).Height = this.Height;
+            }
+            catch (InvalidCastException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
