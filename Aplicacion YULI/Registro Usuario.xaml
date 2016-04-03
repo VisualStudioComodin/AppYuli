@@ -57,7 +57,7 @@
                 </Button.Background>
             </Button>
 
-            <PasswordBox x:Name="txtClave" HorizontalAlignment="Left" Margin="1350,614,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
+            <PasswordBox x:Name="txtClaveRep" HorizontalAlignment="Left" Margin="1350,614,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
             <Button x:Name="fotoBoton" Padding="115" Height="325" Width="359" Background="#FF26243E" BorderBrush="White" Margin="525,457,1036,298" Click="fotoBoton_Click">
                 <DockPanel>
                     <Image x:Name="fotoUsuario" Source="imagen jpg icono.png"/>
@@ -65,7 +65,7 @@
             </Button>
             <Rectangle x:Name="Fondo_Contrasena_Copy" Fill="#FF4D6089" Margin="0,513,570,524" HorizontalAlignment="Right" Width="209"/>
             <TextBlock x:Name="Contrasena_Copy" Margin="0,519,576,533" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" HorizontalAlignment="Right" Width="203"><Run Text="CONTRASEÑA"/><Run Text=":"/></TextBlock>
-            <PasswordBox x:Name="txtClave_Copy" HorizontalAlignment="Left" Margin="1350,512,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
+            <PasswordBox x:Name="txtClave" HorizontalAlignment="Left" Margin="1350,512,0,0" VerticalAlignment="Top" Width="440" Height="44" FontFamily="Segoe UI" FontSize="32"/>
             <Button x:Name="botonAtras" HorizontalAlignment="Left" Margin="77,903,0,0" VerticalAlignment="Top" Width="105" Height="105" RenderTransformOrigin="1.426,0.514" Background="Transparent" Click="botonAtras_Click">
 
             </Button>

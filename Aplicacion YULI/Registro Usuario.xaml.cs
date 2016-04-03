@@ -75,22 +75,34 @@ namespace Aplicacion_YULI
                 }
                 if (res)
                 {
-                    usuario.CrearNuevoUsuario(valores);
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Usuario registrado", 3, "");
-                    mensaje.Owner = owner;
-                    mensaje.ShowDialog();
-                    txtUsuario.Text = null;
-                    txtClave.Password = null;
-                    txtNombre.Text = null;
-                    txtApellido.Text = null;
-                    txtCedula.Text = null;
-                    txtProfesion.Text = null;
-                    calendario.DisplayDate = DateTime.Today;
-                    calendario.SelectedDate = null;
-                    comboBoxPermisos.SelectedIndex = -1;
-                    fotoBytes = null;
-                    fotoBoton.Padding = new Thickness(115);
-                    fotoUsuario.Source = imagenPorDefecto;
+                    if (txtClave.Password.Equals(txtClaveRep.Password))
+                    {
+                        usuario.CrearNuevoUsuario(valores);
+                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Usuario registrado", 3, "");
+                        mensaje.Owner = owner;
+                        mensaje.ShowDialog();
+                        txtUsuario.Text = null;
+                        txtClave.Password = null;
+                        txtNombre.Text = null;
+                        txtApellido.Text = null;
+                        txtCedula.Text = null;
+                        txtProfesion.Text = null;
+                        txtClaveRep.Password = null;
+                        calendario.DisplayDate = DateTime.Today;
+                        calendario.SelectedDate = null;
+                        comboBoxPermisos.SelectedIndex = -1;
+                        fotoBytes = null;
+                        fotoBoton.Padding = new Thickness(115);
+                        fotoUsuario.Source = imagenPorDefecto;
+                    }
+                    else
+                    {
+                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Las contraseñas no son iguales", 1, "Error de contraseña");
+                        mensaje.Owner = owner;
+                        mensaje.ShowDialog();
+                        txtClave.Password = null;
+                        txtClaveRep.Password = null;
+                    }
                 }
             }
             catch (MySqlException ex)
