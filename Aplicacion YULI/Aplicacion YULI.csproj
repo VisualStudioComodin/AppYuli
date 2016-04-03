@@ -201,6 +201,15 @@
   <ItemGroup>
     <Resource Include="Ajustes Boton Final.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono Mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono Mas Blanco.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
