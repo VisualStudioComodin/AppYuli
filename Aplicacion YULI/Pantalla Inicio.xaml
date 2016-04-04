@@ -7,25 +7,25 @@
         mc:Ignorable="d"
         Title="Window2" Height="1078" Width="1920" Background="Black">
     <Viewbox Width="1920" Height="1080">
-    <Grid Width="1920" Height="1080">
-        <Rectangle x:Name="Fondo_Usuario" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="694.5,504.5,0,516.5" Width="225"/>
-        <Ellipse x:Name="Fondo_Boton_Usuario" Fill="#FF4D6089" HorizontalAlignment="Right" Height="117.333" Margin="0,0,36.282,51.333" VerticalAlignment="Bottom" Width="117.333"/>
+        <Grid Width="1920" Height="1080">
+            <Rectangle x:Name="Fondo_Usuario" Fill="#FF4D6089" HorizontalAlignment="Left" Margin="694.5,504.5,0,516.5" Width="225"/>
+            <Ellipse x:Name="Fondo_Boton_Usuario" Fill="#FF4D6089" HorizontalAlignment="Right" Height="117.333" Margin="0,0,56.118,76.644" VerticalAlignment="Bottom" Width="117.333"/>
 
-        <TextBlock x:Name="Usuario" HorizontalAlignment="Left" Margin="694.5,515,0,528" TextWrapping="Wrap" Width="218.794" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" TextAlignment="Center"><Run Text="USUARIO"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="txtUsuario" Margin="918.294,504.5,592.206,516" TextWrapping="Wrap" FontSize="32"/>
-        <Rectangle x:Name="Fondo_Cotrasena" Fill="#FF4D6089" HorizontalAlignment="Left" Height="59" Margin="694.5,0,0,397.5" VerticalAlignment="Bottom" Width="225"/>
-        <PasswordBox x:Name="txtClave" Height="59" Margin="918.294,0,592.206,397.5" VerticalAlignment="Bottom" FontSize="32"/>
-        <TextBlock x:Name="Contraseña" HorizontalAlignment="Left" Margin="694.5,0,0,412.5" TextWrapping="Wrap" Width="225" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" Height="33.5" VerticalAlignment="Bottom" TextAlignment="Center" Text="CONTRASEÑA:"/>
-        <TextBlock x:Name="Versión" HorizontalAlignment="Left" Height="32" Margin="38,0,0,58" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="Versión 1.0.0"/><Run Text=" "/></TextBlock>
-        <TextBlock x:Name="Comodin_Studios_texto" Height="24" Margin="722.127,0,607.206,66" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="C"/><Run Text="omodin "/><Run Text="S"/><Run Text="tudios todos los derechos son reservados®"/></TextBlock>
-        <Image x:Name="Logo_Comodin" Height="416.521" Margin="802.294,60.479,701.412,0" VerticalAlignment="Top" Source="logo comodin.png"/>
-        <Button x:Name="botonRegistrar" Content="" HorizontalAlignment="Right" Height="93.999" Margin="0,0,34.751,63.667" VerticalAlignment="Bottom" Width="116.196" BorderBrush="{x:Null}" Click="botonRegistrar_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="nuevo usuario icono.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="iniciarSesion" Content="INICIAR" HorizontalAlignment="Right" Height="48.503" Margin="0,0,592.206,300.497" VerticalAlignment="Bottom" Width="160.294" Background="#FF4D6089" FontSize="29.333" FontFamily="Consolas" FontWeight="Bold" Foreground="White" Click="iniciarSesion_Click"/>
+            <TextBlock x:Name="Usuario" HorizontalAlignment="Left" Margin="694.5,515,0,528" TextWrapping="Wrap" Width="218.794" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" TextAlignment="Center"><Run Text="USUARIO"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="txtUsuario" Margin="918.294,504.5,592.206,516" TextWrapping="Wrap" FontSize="32"/>
+            <Rectangle x:Name="Fondo_Cotrasena" Fill="#FF4D6089" HorizontalAlignment="Left" Height="59" Margin="694.5,0,0,397.5" VerticalAlignment="Bottom" Width="225"/>
+            <PasswordBox x:Name="txtClave" Height="59" Margin="918.294,0,592.206,397.5" VerticalAlignment="Bottom" FontSize="32"/>
+            <TextBlock x:Name="Contraseña" HorizontalAlignment="Left" Margin="694.5,0,0,412.5" TextWrapping="Wrap" Width="225" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="32" Height="33.5" VerticalAlignment="Bottom" TextAlignment="Center" Text="CONTRASEÑA:"/>
+            <TextBlock x:Name="Versión" HorizontalAlignment="Left" Height="32" Margin="40.664,0,0,80.644" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="Versión 1.0.0"/><Run Text=" "/></TextBlock>
+            <TextBlock x:Name="Comodin_Studios_texto" Height="24" Margin="722.127,0,607.206,85.5" TextWrapping="Wrap" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="21.333"><Run Text="C"/><Run Text="omodin "/><Run Text="S"/><Run Text="tudios todos los derechos son reservados®"/></TextBlock>
+            <Image x:Name="Logo_Comodin" Height="416.521" Margin="802.294,60.479,701.412,0" VerticalAlignment="Top" Source="logo comodin.png"/>
+            <Button x:Name="botonRegistrar" Content="" HorizontalAlignment="Right" Height="77.999" Margin="0,0,65.254,96.978" VerticalAlignment="Bottom" Width="96.418" BorderBrush="{x:Null}" Click="botonRegistrar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="nuevo usuario icono.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="iniciarSesion" Content="INICIAR" HorizontalAlignment="Right" Height="48.503" Margin="0,0,592.206,300.497" VerticalAlignment="Bottom" Width="160.294" Background="#FF4D6089" FontSize="29.333" FontFamily="Consolas" FontWeight="Bold" Foreground="White" Click="iniciarSesion_Click"/>
 
-    </Grid>
+        </Grid>
     </Viewbox>
 </Window>
