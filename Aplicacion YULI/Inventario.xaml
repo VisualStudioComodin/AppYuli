@@ -11,6 +11,7 @@
         <Grid Width="1920" Height="1080">
             <Rectangle x:Name="Fondo_Filtros" Fill="#FF4D6089" Height="38.375" Margin="105.667,139.345,0,0" Stroke="Black" VerticalAlignment="Top" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Width="407.333"/>
             <Image x:Name="icono_buscar" HorizontalAlignment="Left" Height="41.096" Margin="116.337,138.345,0,0" VerticalAlignment="Top" Width="41.096" Source="Icono Buscar.png"/>
+            <Path Data="M1759.6667,954.66667 C1759.6667,954.66667 1721.4996,992.74969 1759.2496,1028.9997 L1519.4957,1028.9997 1519.4957,954.24969 z" Fill="#FF4D6089" HorizontalAlignment="Right" Height="75.75" Margin="0,0,159.333,50" Stretch="Fill" Stroke="Black" VerticalAlignment="Bottom" Width="261.167"/>
             <Ellipse Fill="#FF4D6089" HorizontalAlignment="Right" Height="88.767" Margin="0,0,82.733,42.499" Stroke="Black" VerticalAlignment="Bottom" Width="88.767"/>
             <Image x:Name="image1" HorizontalAlignment="Right" Height="66.351" Margin="0,0,93.044,52.81" VerticalAlignment="Bottom" Width="66.351" Source="Icono Mas Blanco.png"/>
             <DataGrid x:Name="tablaProductos" HeadersVisibility="Column" Background="White" Foreground="Black" Margin="103.267,241.5,82.733,168.5" BorderBrush="Black" FontSize="32" IsReadOnly="True" AlternatingRowBackground="#FFF5F5F5" RowBackground="White" Initialized="tablaProductos_Initialized" MouseLeave="tablaProductos_MouseLeave">
@@ -58,10 +59,11 @@
             <TextBlock x:Name="Almacen" Margin="0,140.438,487.694,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" HorizontalAlignment="Right" Width="201.806"><Run Text="ALMACEN"/><Run Text=":"/></TextBlock>
             <TextBlock x:Name="filtros" Margin="171.5,142.281,0,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" HorizontalAlignment="Left" Width="296.806" Text="FILTROS DE BUSQUEDA"/>
             <Rectangle Fill="#FF4D6089" HorizontalAlignment="Right" Height="39.895" Margin="0,138.345,88.309,0" RadiusY="5" RadiusX="5" Stroke="White" VerticalAlignment="Top" Width="39.895"/>
-            <Image x:Name="image" HorizontalAlignment="Right" Height="36.553" Margin="0,141.167,89.921,0" VerticalAlignment="Top" Width="36.554" Source="Icono Mas Blanco.png"/>
+            <Image x:Name="image" HorizontalAlignment="Right" Height="36.553" Margin="0,142.888,88.309,0" VerticalAlignment="Top" Width="36.554" Source="Ajustes Boton Final.png"/>
             <Rectangle Fill="#9B3D424D" Height="91" VerticalAlignment="Top" Margin="0,0,-13.5,0"/>
             <TextBlock x:Name="Ventana_Nombre" Height="73" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="INVENTARIO" FontSize="64" FontWeight="Bold" TextAlignment="Center"/>
             <Button x:Name="atrasBoton" HorizontalAlignment="Left" Margin="81,945,0,0" VerticalAlignment="Top" Width="109" Height="93" Background="Transparent" Click="atrasBoton_Click"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Height="29.132" Margin="0,0,194.169,72.965" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="205.167" Foreground="White" FontWeight="Bold" FontSize="21.333"><Run Text="AÑADIR "/><Run Text="PRODUCTO"/></TextBlock>
 
         </Grid>
     </Viewbox>

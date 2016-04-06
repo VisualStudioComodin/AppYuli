@@ -17,7 +17,7 @@ namespace Aplicacion_YULI
     {
         private string[] variables;
         private string tabla;
-        private string id;
+        public string id;
 
         public Usuario()
         {
