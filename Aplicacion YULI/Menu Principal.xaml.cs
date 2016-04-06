@@ -19,14 +19,29 @@ namespace Aplicacion_YULI
     /// </summary>
     public partial class Menu_Principal : Window
     {
-        public Menu_Principal()
+        Window owner;
+        Usuario usuario;
+
+        public Menu_Principal(Window owner, Usuario usuario)
         {
             InitializeComponent();
+            this.owner = owner;
+            this.usuario = usuario;
+            nombreUsuario.Text = "BIENVENIDO: "+usuario.DarNombre() + " " + usuario.DarApellido();
         }
 
         private void boton_realizar_venta_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void boton_intentario_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 u = new Window1(owner, usuario);
+            owner.Content = ((Viewbox)u.Content);
+            ((Viewbox)owner.Content).Height = owner.Height;
+            ((Viewbox)owner.Content).Width = owner.Width;
+            u.Close();
         }
     }
 }

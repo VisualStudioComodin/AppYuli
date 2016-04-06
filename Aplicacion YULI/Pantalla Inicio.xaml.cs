@@ -52,7 +52,7 @@ namespace Aplicacion_YULI
                     mensaje.ShowDialog();
                     txtClave.Password = "";
                     txtUsuario.Text = "";
-                    Menu_Principal u = new Menu_Principal();
+                    Menu_Principal u = new Menu_Principal(owner, usuario);
                     owner.Content = ((Viewbox)u.Content);
                     ((Viewbox)owner.Content).Height = owner.Height;
                     ((Viewbox)owner.Content).Width = owner.Width;
