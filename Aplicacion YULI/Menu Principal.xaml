@@ -46,9 +46,9 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Image x:Name="Compras" HorizontalAlignment="Left" Margin="644.054,427.408,0,437.549" Width="215.043" Source="Icono Almacen.png"/>
-            <Image x:Name="Ventas" HorizontalAlignment="Right" Margin="0,427.408,637.034,437.549" Width="215.043" Source="Icono Almacen.png"/>
-            <Image x:Name="General" HorizontalAlignment="Right" Margin="0,427.408,184.742,437.549" Width="215.043" Source="Icono Almacen.png"/>
+            <Image x:Name="Compras" HorizontalAlignment="Left" Margin="642.413,438.434,0,451.549" Width="190.017" Source="Icono Compras.png"/>
+            <Image x:Name="Ventas" HorizontalAlignment="Right" Margin="0,427.408,637.034,437.549" Width="215.043" Source="Icono Ventas.png"/>
+            <Image x:Name="General" HorizontalAlignment="Right" Margin="0,427.408,184.742,437.549" Width="215.043" Source="Icono Estadisticas.png"/>
             <Rectangle Fill="#FF4D6089" HorizontalAlignment="Left" Height="72.662" Margin="60.524,0,0,58.933" RadiusY="5" RadiusX="5" Stroke="White" VerticalAlignment="Bottom" Width="72.662"/>
             <Image x:Name="Ajustes" HorizontalAlignment="Left" Margin="65.671,0,0,61.188" Width="66.054" Source="Ajustes Boton Final.png" Height="66.054" VerticalAlignment="Bottom"/>
             <Button x:Name="boton_realizar_venta" Content="REALIZAR VENTA" Height="66.211" Margin="0,0,66.66,64.6" VerticalAlignment="Bottom" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="26.667" Foreground="White" Click="boton_realizar_venta_Click" HorizontalAlignment="Right" Width="251.908">
