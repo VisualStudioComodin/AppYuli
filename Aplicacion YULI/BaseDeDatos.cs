@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Aplicacion_YULI
 {
@@ -86,6 +87,29 @@ namespace Aplicacion_YULI
             }
             Desconectar();
             return list;
+        }
+
+        public DataTable DarTabla(string tabla, string[] variables)
+        {
+            DataTable datos = new DataTable();
+            StringBuilder var = new StringBuilder();
+            for (int i = 0; i < variables.Length; i++)
+            {
+                var.Append(variables[i]);
+                if (i < variables.Length - 1)
+                {
+                    var.Append(", ");
+                }
+            }
+            Conectar();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "SELECT "+var.ToString()+" FROM " + tabla + " WHERE 1";
+            cmd.Connection = conexion;
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            da.Fill(datos);
+            Desconectar();
+            return datos;
         }
     }
 }

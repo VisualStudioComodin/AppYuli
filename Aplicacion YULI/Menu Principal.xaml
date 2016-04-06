@@ -10,7 +10,7 @@
         <Grid Margin="0,0,2,0" Width="1920" Height="1080">
             <Rectangle x:Name="contenedor_botones" Fill="#FF26262B" Margin="-47.726,286.211,-26.852,233.895" Stroke="White" RadiusX="15" RadiusY="15" StrokeThickness="3"/>
             <Rectangle x:Name="fondo_inventario" Fill="Black" HorizontalAlignment="Left" Margin="156.012,411.189,0,349.073" RadiusY="10" RadiusX="10" Stroke="White" StrokeThickness="3" Width="322.379"/>
-            <Button x:Name="boton_intentario" Content="INVENTARIO" HorizontalAlignment="Left" Margin="207.95,0,0,374.911" Width="222.779" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="21.333" Foreground="White" Height="46.806" VerticalAlignment="Bottom">
+            <Button x:Name="boton_intentario" Content="INVENTARIO" HorizontalAlignment="Left" Margin="207.95,0,0,374.911" Width="222.779" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="21.333" Foreground="White" Height="46.806" VerticalAlignment="Bottom" Click="boton_intentario_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF4D6089" Offset="0"/>
@@ -62,7 +62,7 @@
             <Rectangle x:Name="Fondo_Nombre" Fill="#9B3D424D" Height="91" VerticalAlignment="Top" Margin="0,0,-13.5,0"/>
             <TextBlock x:Name="Ventana_Nombre" Height="73" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="64" TextAlignment="Center" FontWeight="Bold" Text="MENU PRINCIPAL"/>
             <Rectangle Fill="#9B3D424D" Height="66.069" Margin="702.736,148.159,705.731,0" RadiusY="10" RadiusX="10" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlock" Height="45.046" Margin="529.556,157.164,527.546,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" FontWeight="Bold" TextAlignment="Center" Foreground="White"><Run Text="BIENVENIDO:   "/><Run FontWeight="Normal" Text="Solomeo Paredes"/></TextBlock>
+            <TextBlock x:Name="nombreUsuario" Height="45.046" Margin="529.556,157.164,527.546,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" FontWeight="Bold" TextAlignment="Center" Foreground="White"><Run Text="BIENVENIDO:   "/><Run FontWeight="Normal" Text="Solomeo Paredes"/></TextBlock>
         </Grid>
     </Viewbox>
 </Window>
