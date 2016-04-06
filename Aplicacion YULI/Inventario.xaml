@@ -23,7 +23,7 @@
         <TextBlock x:Name="filtros" Margin="171.5,142.281,0,0" TextWrapping="Wrap" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="26.667" TextAlignment="Center" Height="28.606" VerticalAlignment="Top" HorizontalAlignment="Left" Width="296.806" Text="FILTROS DE BUSQUEDA"/>
         <Rectangle Fill="#FF4D6089" HorizontalAlignment="Right" Height="39.895" Margin="0,138.345,88.309,0" RadiusY="5" RadiusX="5" Stroke="White" VerticalAlignment="Top" Width="39.895"/>
         <Image x:Name="image" HorizontalAlignment="Right" Height="36.553" Margin="0,143.167,88.088,0" VerticalAlignment="Top" Width="36.554" Source="Ajustes Boton Final.png"/>
-        <Rectangle Fill="#9B3D424D" Height="91" VerticalAlignment="Top" Margin="0,0,-13.5,0"/>
+        <Rectangle Fill="#9B3D424D" Height="91" VerticalAlignment="Top"/>
         <TextBlock x:Name="Ventana_Nombre" Height="73" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="INVENTARIO" FontSize="64" FontWeight="Bold" TextAlignment="Center"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Height="33.36" Margin="0,0,193.335,67.072" TextWrapping="Wrap" Text="AÑADIR PRODUCTO" VerticalAlignment="Bottom" Width="232.667" Foreground="White" FontWeight="Bold" FontSize="24"/>
 
