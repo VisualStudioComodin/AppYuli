@@ -29,8 +29,8 @@ namespace Aplicacion_YULI
         {
             InitializeComponent();
             usuarios = new Usuario();
-            //Window2 u = new Window2(this.ventana, usuarios);
-            Window1 u = new Window1(this.ventana, usuarios);
+            Window2 u = new Window2(this.ventana, usuarios);
+            //Window1 u = new Window1(this.ventana, usuarios);
             ventana.Content = null;
             responsive = ((Viewbox)u.Content);
             responsive.Height = this.Height;
