@@ -86,6 +86,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseDeDatos.cs" />
+    <Compile Include="Contacto.cs" />
     <Compile Include="CuadroMensaje.xaml.cs">
       <DependentUpon>CuadroMensaje.xaml</DependentUpon>
     </Compile>
