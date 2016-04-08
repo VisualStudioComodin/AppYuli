@@ -32,9 +32,9 @@ namespace Aplicacion_YULI
            
             // Window2 u = new Window2(this.ventana, usuarios);   // Pantalla Inicio
 
-            Menu_Principal u = new Menu_Principal(this.ventana, new Usuario() { id = "1234" });  // Menu Principal
+            //Menu_Principal u = new Menu_Principal(this.ventana, new Usuario() { id = "1234" });  // Menu Principal
 
-            //Window1 u = new Window1(this.ventana, usuarios); // Inventario
+            Window1 u = new Window1(this.ventana, usuarios); // Inventario
 
             ventana.Content = null;
             responsive = ((Viewbox)u.Content);

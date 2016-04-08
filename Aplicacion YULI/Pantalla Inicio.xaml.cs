@@ -47,7 +47,7 @@ namespace Aplicacion_YULI
             {
                 if (usuario.IniciarSesion(txtUsuario.Text, txtClave.Password))
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Sesión iniciada", 3, "");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Sesión iniciada", 3, "", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                     txtClave.Password = "";
@@ -60,14 +60,14 @@ namespace Aplicacion_YULI
                 }
                 else if (!txtClave.Password.Equals(""))
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Contraseña erronea", 1, "Error de contraseña");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Contraseña erronea", 1, "Error de contraseña", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                     txtClave.Password = "";
                 }
                 else
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe introducir la contraseña", 1, "Error de contraseña");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe introducir la contraseña", 1, "Error de contraseña", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                 }
@@ -76,13 +76,13 @@ namespace Aplicacion_YULI
             {
                 if (txtClave.Password.Equals("") || txtUsuario.Text.Equals(""))
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe llenar todos los campos", 1, "Error de llenado de datos");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe llenar todos los campos", 1, "Error de llenado de datos", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                 }
                 else
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Nombre de usuario erroneo", 1, "Error de usuario");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Nombre de usuario erroneo", 1, "Error de usuario", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                 }

@@ -23,11 +23,11 @@ namespace Aplicacion_YULI
         private double relacionAncho;
         private double relacionAlto;
 
-        public CuadroMensaje(double ancho, double alto, string mensaje, int tipoDeMensaje, string titulo)
+        public CuadroMensaje(double ancho, double alto, string mensaje, int tipoDeMensaje, string titulo, bool max)
         {
             InitializeComponent();
-            ancho = (ancho / 100.0) * 50.0;
-            alto = (alto / 100.0) * 50.0;
+            ancho = (ancho / 100.0) * (!max?50.0:70.0);
+            alto = (alto / 100.0) * (!max ? 50.0 : 70.0);
             if (ancho < alto)
             {
                 alto = (ancho * (9.0 / 16.0));

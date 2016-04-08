@@ -64,6 +64,7 @@
             <TextBlock x:Name="Ventana_Nombre" Height="73" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="INVENTARIO" FontSize="64" FontWeight="Bold" TextAlignment="Center"/>
             <Button x:Name="atrasBoton" HorizontalAlignment="Left" Margin="81,945,0,0" VerticalAlignment="Top" Width="109" Height="93" Background="Transparent" Click="atrasBoton_Click"/>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Height="29.132" Margin="0,0,194.169,72.965" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="205.167" Foreground="White" FontWeight="Bold" FontSize="21.333"><Run Text="AÑADIR "/><Run Text="PRODUCTO"/></TextBlock>
+            <Button x:Name="botonConfigAlmacen" Background="Transparent" Content="" HorizontalAlignment="Left" Margin="1792,138,0,0" VerticalAlignment="Top" Width="45" Height="41" Click="botonConfigAlmacen_Click"/>
 
         </Grid>
     </Viewbox>

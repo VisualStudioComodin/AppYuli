@@ -68,7 +68,7 @@ namespace Aplicacion_YULI
                 bool res = true;
                 if (fotoBytes == null)
                 {
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "¿Registrar sin fotografía?", 2, "");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "¿Registrar sin fotografía?", 2, "", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                     res = mensaje.DarRespuesta();
@@ -78,7 +78,7 @@ namespace Aplicacion_YULI
                     if (txtClave.Password.Equals(txtClaveRep.Password))
                     {
                         usuario.CrearNuevoUsuario(valores);
-                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Usuario registrado", 3, "");
+                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Usuario registrado", 3, "", false);
                         mensaje.Owner = owner;
                         mensaje.ShowDialog();
                         txtUsuario.Text = null;
@@ -97,7 +97,7 @@ namespace Aplicacion_YULI
                     }
                     else
                     {
-                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Las contraseñas no son iguales", 1, "Error de contraseña");
+                        mensaje = new CuadroMensaje(owner.Width, owner.Height, "Las contraseñas no son iguales", 1, "Error de contraseña", false);
                         mensaje.Owner = owner;
                         mensaje.ShowDialog();
                         txtClave.Password = null;
@@ -109,12 +109,12 @@ namespace Aplicacion_YULI
             {
                
                 if(ex.Number == 1048){
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe llenar todos los campos", 1, "Error 1048");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Debe llenar todos los campos", 1, "Error 1048", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                 }
                 else if(ex.Number == 1062){
-                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Ya existe el usuario: " + txtUsuario.Text, 1, "Error 1062");
+                    mensaje = new CuadroMensaje(owner.Width, owner.Height, "Ya existe el usuario: " + txtUsuario.Text, 1, "Error 1062", false);
                     mensaje.Owner = owner;
                     mensaje.ShowDialog();
                 }

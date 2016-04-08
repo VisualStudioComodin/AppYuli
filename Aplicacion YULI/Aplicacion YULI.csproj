@@ -85,7 +85,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Almacen.cs" />
     <Compile Include="BaseDeDatos.cs" />
+    <Compile Include="ConfiguracionAlmacen.xaml.cs">
+      <DependentUpon>ConfiguracionAlmacen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Contacto.cs" />
     <Compile Include="CuadroMensaje.xaml.cs">
       <DependentUpon>CuadroMensaje.xaml</DependentUpon>
@@ -95,6 +99,9 @@
     </Compile>
     <Compile Include="Menu Principal.xaml.cs">
       <DependentUpon>Menu Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoAlmacen.xaml.cs">
+      <DependentUpon>NuevoAlmacen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pantalla Inicio.xaml.cs">
       <DependentUpon>Pantalla Inicio.xaml</DependentUpon>
@@ -109,6 +116,10 @@
       <DependentUpon>sistema_yuliDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
+    <Page Include="ConfiguracionAlmacen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CuadroMensaje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menu Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NuevoAlmacen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

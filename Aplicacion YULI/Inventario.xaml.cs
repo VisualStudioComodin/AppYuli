@@ -78,6 +78,14 @@ namespace Aplicacion_YULI
         {
             tablaProductos.SelectedIndex = -1;
         }
+
+        private void botonConfigAlmacen_Click(object sender, RoutedEventArgs e)
+        {
+            //NuevoAlmacen al = new NuevoAlmacen(owner.Width, owner.Height);
+            ConfiguracionAlmacen al = new ConfiguracionAlmacen(owner.Width, owner.Height);
+            al.Owner = owner;
+            al.ShowDialog();
+        }
     }
 
     public class FilaDeProductos
